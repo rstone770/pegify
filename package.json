@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "description": "Pegjs browserify transform that just works.",
   "main": "./bin/pegify.js",
+  "scripts": {
+    "build": "npm run-script lint && npm run-script test",
+    "lint": "node ./node_modules/gulp/bin/gulp.js",
+    "test": "node ./node_modules/gulp/bin/gulp.js test"
+  },
   "keywords": [
     "pegjs",
     "peg",
