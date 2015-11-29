@@ -1,4 +1,4 @@
-# Pegify
+# Pegify [![Build Status](https://travis-ci.org/rstone770/pegify.svg?branch=master)](https://travis-ci.org/rstone770/pegify)
 
 A configurable [Browserify](http://browserify.org/) transform for [PegJS](http://pegjs.org/) that just works.
 
@@ -54,7 +54,7 @@ __output = 'source'__
 This option is locked, and cannot be modified.
 
 
-__export = module.exports__
+__export = 'module.exports'__
 
 Defines variable that the compiled parser should be exported to. The default is set to commonjs module.export so that it can be injected as a module.
 
