@@ -1,0 +1,33 @@
+{
+  "name": "pegify",
+  "version": "0.0.0",
+  "description": "Pegjs browserify transform that just works.",
+  "main": "./bin/pegify.js",
+  "keywords": [
+    "pegjs",
+    "peg",
+    "client-side",
+    "require",
+    "browserify",
+    "gulp"
+  ],
+  "author": "brenden snyder <rstone770@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "rcloader": "^0.1.4",
+    "through": "^2.3.8"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "colors": "^1.1.2",
+    "glob": "^6.0.1",
+    "gulp": "^3.9.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.8.0",
+    "pegjs": "^0.9.0"
+  }
+}
