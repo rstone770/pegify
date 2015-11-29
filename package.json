@@ -1,8 +1,12 @@
 {
   "name": "pegify",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Pegjs browserify transform that just works.",
   "main": "./bin/pegify.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rstone770/pegify"
+  },
   "scripts": {
     "build": "npm run-script lint && npm run-script test",
     "lint": "node ./node_modules/gulp/bin/gulp.js",
