@@ -44,7 +44,7 @@ describe('Pegify', function () {
   /**
    * Asserts that a collection is a set of default extensions.
    *
-   * @param  {Array} extensions [description]
+   * @param  {Array} extensions
    */
   var expectDefaultExtensions = function (extensions) {
     expectExtensionsEqual(['.peg', '.pegjs'], extensions);
@@ -52,9 +52,9 @@ describe('Pegify', function () {
 
   /**
    * Asserts that expected extensions are equal to actual.
-   *../fixtures/
-   * @param  {!Array} expected [description]
-   * @param  {!Array} actual   [description]
+   *
+   * @param  {!Array} expected
+   * @param  {!Array} actua
    */
   var expectExtensionsEqual = function (expected, actual) {
     expect(actual).to.have.length(expected.length);
