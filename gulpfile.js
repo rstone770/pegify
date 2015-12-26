@@ -1,4 +1,5 @@
-var TaskMan = require('./tasks/TaskMan'),
+var gulp = require('gulp'),
+    Taskman = require('./tasks/Taskman'),
     config = require('./gulpfile.config');
 
-TaskMan.create(__dirname, config).load('./tasks/**/*-task.js');
+Taskman.create(gulp, __dirname, config).load('./tasks/**/*-task.js');

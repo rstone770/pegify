@@ -1,17 +1,17 @@
 require('colors');
 
 var glob = require('glob'),
-    gulp = require('gulp'),
     gutil = require('gulp-util'),
     path = require('path');
 
 /**
  * Task api that configures and loads gulp tasks.
  *
+ * @param {!Gulp} gulp
  * @param {String=} cwd
  * @param {Object=} config
  */
-var TaskMaster = function (cwd, config) {
+var Taskman = function (gulp, cwd, config) {
 
   /**
    * Configuration options that will be injected into every gulp task.
@@ -43,14 +43,15 @@ var TaskMaster = function (cwd, config) {
 };
 
 /**
- * TaskMaster factory.
+ * Taskman factory.
  *
+ * @param {!Gulp} gulp
  * @param {String=} cwd
  * @param {Object=} config
  * @return {!TaskMan}
  */
-TaskMaster.create = function (cwd, config) {
-  return new this(cwd, config);
+Taskman.create = function (gulp, cwd, config) {
+  return new this(gulp, cwd, config);
 };
 
 /**
@@ -61,7 +62,7 @@ TaskMaster.create = function (cwd, config) {
  * @param  {!String} path
  * @return {!TaskMan}
  */
-TaskMaster.prototype.load = function (path) {
+Taskman.prototype.load = function (path) {
   if (typeof path !== 'string') {
     throw new Error('path must be a string.');
   }
@@ -80,7 +81,7 @@ TaskMaster.prototype.load = function (path) {
  *
  * @param  {!String} task
  */
-TaskMaster.prototype._load = function (task) {
+Taskman.prototype._load = function (task) {
   gutil.log('Found task ' + task.magenta);
 
   var module = require('./' + path.relative(this._root, task));
@@ -92,4 +93,4 @@ TaskMaster.prototype._load = function (task) {
   }
 };
 
-module.exports = TaskMaster;
+module.exports = Taskman;
