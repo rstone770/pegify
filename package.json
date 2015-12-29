@@ -1,6 +1,6 @@
 {
   "name": "pegify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pegjs browserify transform that just works.",
   "main": "./bin/pegify.js",
   "repository": {
