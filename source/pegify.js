@@ -102,7 +102,7 @@ Pegify.getExtensions = function (options) {
  * @return {!String}
  */
 Pegify.prototype.compile = function (content) {
-  return this._options.export + '=' + pegjs.buildParser(content, this._options);
+  return this._options.export + '=' + pegjs.generate(content, this._options);
 };
 
 /**
